@@ -88,6 +88,11 @@ public class LinkedList {
         throw new NullPointerException("Can't loop through an empty list!");
     }
 
+    public void clear() {
+        head = null;
+        size = 0;
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
