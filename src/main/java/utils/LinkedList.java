@@ -53,4 +53,16 @@ public class LinkedList {
         size++;
     }
 
+    public int size() {
+        return this.size;
+    }
+
+    // todo: size()
+    // todo: get()
+    // todo: isEmpty()
+    // todo: indexOf()
+    // todo: clear()
+    // todo: contains()
+    // todo: set()
+
 }
