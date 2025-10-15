@@ -93,6 +93,21 @@ public class LinkedList {
         size = 0;
     }
 
+    public boolean contains(int value) {
+        if (!isEmpty()) {
+            Node current = head;
+            for (int i = 0; i < this.size; i++) {
+                if (current.data == value) {
+                    return true;
+                } else {
+                    current = current.next;
+                }
+            }
+            return false;
+        }
+        throw new NullPointerException("Can't loop through an empty list!");
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
