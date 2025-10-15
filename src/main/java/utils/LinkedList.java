@@ -74,6 +74,20 @@ public class LinkedList {
         return head == null;
     }
 
+    public int indexOf(int value) {
+        if (!isEmpty()) {
+            Node current = head;
+            for (int i = 0; i < this.size; i++) {
+                if (current.data == value) {
+                    return i;
+                } else {
+                    current = current.next;
+                }
+            }
+        }
+        throw new NullPointerException("Can't loop through an empty list!");
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
