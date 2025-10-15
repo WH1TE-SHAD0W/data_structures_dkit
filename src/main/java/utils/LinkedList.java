@@ -108,6 +108,25 @@ public class LinkedList {
         throw new NullPointerException("Can't loop through an empty list!");
     }
 
+    public int set(int index, int value) {
+        if (isEmpty()) {
+            throw new NullPointerException("Can't loop through an empty list!");
+        }
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("");
+        }
+
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        int old_value = current.data;
+        current.data = value;
+
+        return old_value;
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
