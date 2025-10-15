@@ -57,6 +57,19 @@ public class LinkedList {
         return this.size;
     }
 
+    public int get(int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("");
+        }
+
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        return current.data;
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
