@@ -70,6 +70,10 @@ public class LinkedList {
         return current.data;
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
+
     // todo: size()
     // todo: get()
     // todo: isEmpty()
