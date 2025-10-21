@@ -195,31 +195,40 @@ public class LinkedList {
         System.out.println();
     }
 
+    public int remove(int value) {
+        Node current = head;
+        if (current.data == value) {
+            int return_value = current.data;
+            head = head.next;
+            return return_value;
+        }
+        for (int i = 0; i < this.size; i++) {
+            if (current.next == null) {
+                return value;
+            }
+            if (current.next.data == value) {
+                int return_value = current.next.data;
+                current.next = current.next.next;
+                size--;
+                return return_value;
+            }
+            current = current.next;
+        }
+        return value;
+    }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.add(1);
         list.add(2);
-        list.add(2);
         list.add(3);
-        list.add(1);
+        list.add(4);
+        list.add(5);
 
-        LinkedList rotated = list.rotate(2);
+        list.remove(1);
         list.display();
-
-        rotated = rotated.rotate(1);
-        rotated.display();
-
-        rotated = rotated.rotate(1);
-        rotated.display();
-
-        rotated = rotated.rotate(1);
-        rotated.display();
 
     }
 }
 
-    // todo: deduplicate() -> should return a new list containing one instance of each value from current list
-    // todo: join() -> should take in a second list and add its contents onto this list
-    // todo: rotate() -> should take in the number of positions by which the list should be rotated. For example, if
-    //  1 is supplied, it should take the final element from the list and move it to the start of the list
 
