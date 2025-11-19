@@ -217,6 +217,16 @@ public class LinkedList {
         return value;
     }
 
+//    public void bubbleSort() {
+//       for each slot in the array-1 as i:
+//          for each slot in data -1 - index i
+//              if value of current node is higher than the value of the next node
+//                  temporary_var value is current node value
+//                  current node value is the value of the next node
+//                  value of the next node is the value of the temporary_var
+//
+//    }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.add(1);
